@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — St. Thomas Pastries</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>St. Thomas Pastries</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main class="form-container">
+    <h2>Join Our Community</h2>
+    <form id="signupForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required/>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="your@email.com"/>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required minlength="8"/>
+
+      <label for="role">I am a...</label>
+      <select id="role" required>
+        <option value="">Select</option>
+        <option value="customer">Customer</option>
+        <option value="bakery">Bakery / Partner</option>
+      </select>
+
+      <button type="submit" class="btn primary">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 St. Thomas Pastries</p>
+  </footer>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Sign-up simulation: Account created! Welcome!');
+      // In real app → send to backend + validation
+    });
+  </script>
+</body>
+</html>

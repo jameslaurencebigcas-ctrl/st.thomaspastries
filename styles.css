@@ -1,0 +1,112 @@
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Georgia', serif;
+  background-color: #FFFDD0; /* cream */
+  color: #5C4033; /* deep brown */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #C68E17; /* caramel/goldish */
+  color: white;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo h1 { font-size: 2rem; margin: 0; }
+.tagline { font-style: italic; font-size: 1rem; margin-top: 0.3rem; }
+nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 10%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x500?text=Pastries+with+Chalice+&+Host'); /* replace with real image */
+  background-size: cover;
+  color: white;
+}
+.hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+.hero blockquote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
+}
+.cta-buttons { margin-top: 2rem; }
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+.primary { background: #5C4033; }
+.primary:hover { background: #7a5a48; }
+.secondary { background: #8B4513; }
+.secondary:hover { background: #a05f2b; }
+
+/* Featured */
+.featured { padding: 3rem 5%; text-align: center; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card h3 { color: #C68E17; }
+
+/* Forms */
+.form-container {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.form-container h2 { text-align: center; margin-bottom: 1.5rem; color: #5C4033; }
+form label { display: block; margin: 1rem 0 0.4rem; font-weight: bold; }
+form input, form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #C68E17;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+form button { margin-top: 1.5rem; width: 100%; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #5C4033;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header { flex-direction: column; text-align: center; }
+  nav { margin-top: 1rem; }
+  .hero { padding: 3rem 5%; }
+  .hero h2 { font-size: 2.2rem; }
+}
