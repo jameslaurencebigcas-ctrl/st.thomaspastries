@@ -1,12 +1,12 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
   font-family: 'Georgia', serif;
   background-color: #FFFDD0; /* cream */
   color: #5C4033; /* deep brown */
   line-height: 1.6;
 }
-
 
 header {
   background: #C68E17; /* caramel/goldish */
@@ -17,31 +17,42 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
+
 .logo h1 { font-size: 2rem; margin: 0; }
+
 .tagline { font-style: italic; font-size: 1rem; margin-top: 0.3rem; }
+
 nav a {
   color: white;
   margin-left: 1.5rem;
   text-decoration: none;
   font-weight: bold;
 }
-nav a:hover { text-decoration: underline; }
 
+nav a:hover { text-decoration: underline; }
 
 .hero {
   text-align: center;
-  padding: 4rem 10%;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x500?text=Pastries+with+Chalice+&+Host'); /* replace with real image */
-  background-size: cover;
+  padding: 6rem 10%;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), 
+              url('https://www.shutterstock.com/image-photo/breakfast-pastries-assorted-freshly-baked-600nw-2644389289.jpg') center/cover no-repeat;
   color: white;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.hero h2 { font-size: 3rem; margin-bottom: 1rem; }
+
+.hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+
 .hero blockquote {
   font-style: italic;
   margin: 1.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
+
 .cta-buttons { margin-top: 2rem; }
+
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
@@ -53,27 +64,81 @@ nav a:hover { text-decoration: underline; }
   text-decoration: none;
   color: white;
 }
+
 .primary { background: #5C4033; }
 .primary:hover { background: #7a5a48; }
+
 .secondary { background: #8B4513; }
 .secondary:hover { background: #a05f2b; }
 
-/* Featured */
-.featured { padding: 3rem 5%; text-align: center; }
+/* Featured section with pastry images */
+.featured {
+  padding: 4rem 5%;
+  text-align: center;
+}
+
+.featured h2 {
+  color: #C68E17;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
+
 .card {
   background: white;
-  padding: 1.8rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.card h3 { color: #C68E17; }
 
+.card:hover { transform: translateY(-8px); }
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #C68E17;
+  margin-bottom: 0.8rem;
+}
+
+/* Example cards — add these in your HTML inside .grid */
+<!-- Example HTML usage:
+<div class="grid">
+  <div class="card">
+    <img src="https://static.vecteezy.com/system/resources/previews/060/108/942/non_2x/freshly-baked-apple-pie-from-usa-with-a-golden-flaky-crust-and-aromatic-cinnamon-filling-presented-in-a-cozy-gourmet-setting-high-resolution-style-photo.jpg" alt="Golden Apple Pie">
+    <h3>Classic Apple Pie</h3>
+    <p>Flaky crust filled with warm cinnamon apples.</p>
+  </div>
+  <div class="card">
+    <img src="https://www.kingarthurbaking.com/sites/default/files/recipe_legacy/6093-3-large.jpg" alt="Artisan Sourdough Bread">
+    <h3>Crusty Sourdough</h3>
+    <p>Perfectly fermented artisan loaf.</p>
+  </div>
+  <div class="card">
+    <img src="https://shewearsmanyhats.com/wp-content/uploads/2014/11/apple-pie-2.jpg" alt="Fresh Apple Pie Slice">
+    <h3>Apple Pie Slice</h3>
+    <p>Served warm with a scoop of vanilla.</p>
+  </div>
+  <div class="card">
+    <img src="https://thumbs.dreamstime.com/b/basket-filled-freshly-baked-bread-rolls-warm-sunlit-kitchen-home-baking-food-warmth-325832609.jpg" alt="Fresh Bread Rolls">
+    <h3>Soft Bread Rolls</h3>
+    <p>Ideal for any meal or snack.</p>
+  </div>
+</div>
+-->
 
 .form-container {
   max-width: 500px;
@@ -83,8 +148,19 @@ nav a:hover { text-decoration: underline; }
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
-.form-container h2 { text-align: center; margin-bottom: 1.5rem; color: #5C4033; }
-form label { display: block; margin: 1rem 0 0.4rem; font-weight: bold; }
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #5C4033;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.4rem;
+  font-weight: bold;
+}
+
 form input, form select {
   width: 100%;
   padding: 0.8rem;
@@ -92,8 +168,11 @@ form input, form select {
   border-radius: 6px;
   font-size: 1rem;
 }
-form button { margin-top: 1.5rem; width: 100%; }
 
+form button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
 
 footer {
   text-align: center;
@@ -103,11 +182,9 @@ footer {
   margin-top: 3rem;
 }
 
-
 @media (max-width: 768px) {
   header { flex-direction: column; text-align: center; }
   nav { margin-top: 1rem; }
-  .hero { padding: 3rem 5%; }
-  .hero h2 { font-size: 2.2rem; }
-
+  .hero { padding: 4rem 5%; min-height: 400px; }
+  .hero h2 { font-size: 2.5rem; }
 }
