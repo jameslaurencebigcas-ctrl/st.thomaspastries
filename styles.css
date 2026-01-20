@@ -31,12 +31,18 @@ nav a {
 
 nav a:hover { text-decoration: underline; }
 
+.card img {
+  width: 100%;
+  height: 220px;           /* consistent height */
+  object-fit: cover;       /* crops nicely without distortion */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 .hero {
-  text-align: center;
-  padding: 6rem 10%;
+  /* ... your existing styles ... */
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), 
-              url('https://www.shutterstock.com/image-photo/breakfast-pastries-assorted-freshly-baked-600nw-2644389289.jpg') center/cover no-repeat;
-  color: white;
+              url('https://thumbs.dreamstime.com/b/bakery-display-breads-pastries-sweets-wooden-table-assortment-fresh-baked-goods-displayed-wooden-table-cozy-419485763.jpg') center/cover no-repeat;
   min-height: 500px;
   display: flex;
   flex-direction: column;
@@ -188,3 +194,4 @@ footer {
   .hero { padding: 4rem 5%; min-height: 400px; }
   .hero h2 { font-size: 2.5rem; }
 }
+
