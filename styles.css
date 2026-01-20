@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Georgia', serif;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+
 header {
   background: #C68E17; /* caramel/goldish */
   color: white;
@@ -27,7 +27,7 @@ nav a {
 }
 nav a:hover { text-decoration: underline; }
 
-/* Hero */
+
 .hero {
   text-align: center;
   padding: 4rem 10%;
@@ -74,7 +74,7 @@ nav a:hover { text-decoration: underline; }
 }
 .card h3 { color: #C68E17; }
 
-/* Forms */
+
 .form-container {
   max-width: 500px;
   margin: 4rem auto;
@@ -94,7 +94,7 @@ form input, form select {
 }
 form button { margin-top: 1.5rem; width: 100%; }
 
-/* Footer */
+
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -103,10 +103,11 @@ footer {
   margin-top: 3rem;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   header { flex-direction: column; text-align: center; }
   nav { margin-top: 1rem; }
   .hero { padding: 3rem 5%; }
   .hero h2 { font-size: 2.2rem; }
+
 }
